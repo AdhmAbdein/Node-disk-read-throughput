@@ -1,0 +1,8 @@
+
+groups:
+  - name: node_disk_read_throughput
+    rules:
+      - record: node_disk_read_bytes_total_rule
+        expr: rate(node_disk_read_bytes_total[1m])
+        labels:
+          node1: node_disk_read_throughput
